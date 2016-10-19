@@ -32,7 +32,7 @@
 
 #page-content-wrapper {
 	width: 100%;
-	background-color: #e6f7ff;
+	background-color: #F2F2F2;
 }
 
 .left-col {
@@ -53,8 +53,6 @@ h1 {
 	margin-bottom: 5px;
 	font-weight: bold;
 	color: #444444;
-	background-style: outset;
-	font-family: arial;
 }
 
 .us-map {
@@ -62,8 +60,6 @@ h1 {
 	position: absolute;
 }
 
-@
-deprecated
 .loc-map {
 	padding-top: 200px;
 	width: 49%;
@@ -72,14 +68,14 @@ deprecated
 }
 
 .container-fluid {
-	background-color: #e6f2ff;
+	background-color: #F2F2F2;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 7px;
 }
 
 body {
-
+	
 }
 
 .opac {
@@ -93,7 +89,7 @@ path {
 }
 
 .land {
-	fill: #F2F2F2;
+	fill: #ddd;
 }
 
 .states, .hexagons path {
@@ -101,7 +97,7 @@ path {
 }
 
 .row {
-	background-color: #e6f2ff;
+	background-color: #F2F2F2;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 20px;
@@ -126,13 +122,13 @@ path {
 	height: 1px;
 	background: #717171;
 	clear: both;
-	border-bottom: 1px solid #996633;
+	border-bottom: 1px solid #313030;
 }
 
 p {
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #e6f2ff;
+	background-color: #FFFFFF;
 	color: #666;
 	padding: 5px;
 	border-radius: 5px;
@@ -143,11 +139,9 @@ p {
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* */
 #wrapper.toggled #page-content-wrapper {
 	position: absolute;
 	margin-right: -250px;
-	background-color: #ebfaeb;
 }
 
 /* Sidebar Styles */
@@ -168,12 +162,12 @@ p {
 .sidebar-nav li a {
 	display: block;
 	text-decoration: none;
-	color: #145214;
+	color: #999999;
 }
 
 .sidebar-nav li a:hover {
 	text-decoration: none;
-	color: #e6f2ff;
+	color: #fff;
 	background: rgba(255, 255, 255, 0.2);
 }
 
@@ -206,12 +200,10 @@ button.accordion {
 	border: none;
 	outline: none;
 	transition: 0.4s;
-	border: outset;
 }
 
 button.butt.active, button.butt:hover {
-	background-color: #99ccff;
-	background-style: inset;
+	background-color: #ddd;
 }
 
 button.butt {
@@ -226,16 +218,15 @@ button.butt {
 	transition: 0.4s;
 	margin: auto;
 	width: 100%;
-	background-style: outset;
 }
 
 button.accordion.active, button.accordion:hover {
-	background-color: #99ccff;
+	background-color: #ddd;
 }
 
 div.panel {
 	padding: 0 18px;
-	background-color: #ebfaeb;
+	background-color: white;
 	display: none;
 }
 
@@ -244,66 +235,71 @@ div.panel.show {
 }
 
 #col-one {
-	background-style: inset;
+
 	width: 16%;
 	float: left;
-	border: 4px inset;
-	padding: 1%;
-	height: 500px;
-	width: 16%;
+  border: 4px inset;
+  padding: 1%;
+  
+    height: 500px;
 }
 
 #col-two {
-	width: 16%;
-	float: left;
-	border: 4px inset;
-	padding: 1%;
-	height: 500px;
-}
 
-#col-two.hover {
 	width: 16%;
 	float: left;
-	border: 4px inset;
-	padding: 1%;
-	background-style: inset;
-	height: 500px;
+  border: 4px inset;
+  padding: 1%;
+
+    height: 500px;
+}
+#col-two.hover {
+
+	width: 16%;
+	float: left;
+  border: 4px inset;
+  padding: 1%;
+
+    height: 500px;
 }
 
 #col-three {
+
 	width: 16%;
 	float: left;
-	border: 4px inset;
-	padding: 1%;
-	background-style: outset;
-	height: 500px;
+  border: 4px inset;
+  padding: 1%;
+
+height: 500px;
 }
 
 #col-four {
-	background-style: inset;
+
 	width: 16%;
 	float: left;
-	border: 4px inset;
-	padding: 1%;
-	height: 500px;
-	width: 16%;
+  border: 4px inset;
+  padding: 1%;
+
+height: 500px;
 }
 
 #col-five {
-	background-style: outset;
+
 	width: 16%;
 	float: left;
-	border: 4px inset;
-	padding: 1%;
-	height: 500px;
-	width: 16%;
+  border: 4px inset;
+  padding: 1%;
+
+height: 500px;
 }
 
 #revolucio-icon {
 	background-color: #313a49;
 	width: 100%;
 	clear: both;
+	
 }
+
 
 @media ( min-width :768px) {
 	#wrapper {
