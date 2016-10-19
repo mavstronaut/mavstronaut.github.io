@@ -57,6 +57,11 @@ h1 {
 
 .us-map {
 	padding-top: 200px;
+	position: absolute;
+}
+
+.loc-map {
+	padding-top: 200px;
 	width: 420px;
 	height: 420px;
 }
