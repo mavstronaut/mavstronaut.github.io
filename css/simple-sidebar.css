@@ -56,8 +56,9 @@ h1 {
 }
 
 .us-map {
-	position: absolute;
 	padding-top: 200px;
+	width: 420px;
+	height: 420px;
 }
 
 .container-fluid {
