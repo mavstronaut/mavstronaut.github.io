@@ -196,8 +196,9 @@ button.accordion {
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
+	
 	text-align: left;
-	border: none;
+	border-style: groove;
 	outline: none;
 	transition: 0.4s;
 }
@@ -212,8 +213,8 @@ button.butt {
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
-	text-align: left;
-	border: none;
+	text-align: center;
+	border-style: groove;
 	outline: none;
 	transition: 0.4s;
 	margin: auto;
@@ -235,71 +236,65 @@ div.panel.show {
 }
 
 #col-one {
-
+	
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-  
-    height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
 
 #col-two {
-
+	border-top-style: groove;
+	border-bottom-style; groove;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-    height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
-#col-two.hover {
 
+#col-two.hover {
+	border-style: outset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-    height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
 
 #col-three {
-
+	border-style: outset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
 
 #col-four {
-
+	border-style: inset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
 
 #col-five {
-
+	border-style: outset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
 
 #revolucio-icon {
 	background-color: #313a49;
 	width: 100%;
 	clear: both;
-	
 }
-
 
 @media ( min-width :768px) {
 	#wrapper {
