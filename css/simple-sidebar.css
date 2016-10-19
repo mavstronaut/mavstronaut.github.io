@@ -64,6 +64,7 @@ h1 {
 	padding-top: 200px;
 	width: 49%;
 	height: 420px;
+	position: absolute;
 }
 
 .container-fluid {
