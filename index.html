@@ -12,10 +12,10 @@
 <title>Welcome Home</title>
 
 <!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="css/simple-sidebar.css" rel="stylesheet">
+<link href="/css/simple-sidebar.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,6 @@
 
 </head>
 
-<body>
 
 	<div id="wrapper">
 
@@ -34,160 +33,133 @@
 		<div id="sidebar-wrapper">
 
 			<ul class="sidebar-nav">
-				<li class="sidebar-brand"><img src="/cosmic/css/CF-logo.png" /></li>
+				<li class="sidebar-brand"><img src="/images/CF-logo.png" /></li>
 
 
 				<li>.</li>
 				<li>.</li>
-				<li><a href="/cosmic/">Dashboard</a></li>
-				<li><a href="/cosmic/overview.html">Overview</a></li>
-				<li><a href="/cosmic/locations.html">Locations</a></li>
-				<li><a href="/cosmic/portal.html">Portal</a></li>
-				<li><a href="/cosmic/services.html">Services</a></li>
-				<li><a href="/cosmic/contact.html">Contact</a></li>
+				<li><a href="/">Dashboard</a></li>
+				<li><a href="/landing/overview.html">Overview</a></li>
+				<li><a href="/landing/locations.html">Locations</a></li>
+				<li><a href="/landing/portal.html">Portal</a></li>
+				<li><a href="/landing/services.html">Services</a></li>
+				<li><a href="/landing/social-media.html">Social Media</a></li>
+				<li><a href="/landing/contact.html">Contact</a></li>
 			</ul>
 		</div>
 		<!-- /#sidebar-wrapper -->
 
 		<!-- Page Content -->
-		<div id="page-content-wrapper">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="header">
+		
+				
+	
+	
+			
+
+		<div class="header">
 						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-							Menu</a>
-					</div>
-					<div class="col-lg-12">
-						<h1> </h1><center><a href="/cosmic/overview.html">
-				 <img class="displayed" src="/cosmic/css/Cosmic-Financials-Title.png" /></a></center>
-					<div>
+							<img src="/images/menu.png"/></a>
+					</div>				
+						
+				<div class="home-row">
+<a href="/landing/locations.html">
+				 <img src="/images-Financials-Title.png" /></a>
+</div>	
 
-<style>
+		
+					
+							<div class="us-map">
 
-body {
-  background: #fcfcfa;
-}
 
-.stroke {
-  fill: none;
-  stroke: #000;
-  stroke-width: 3px;
-}
-
-.fill {
-  fill: #fff;
-}
-
-.graticule {
-  fill: none;
-  stroke: #777;
-  stroke-width: .5px;
-  stroke-opacity: .5;
-}
-
-.land {
-  fill: #222;
-}
-
-.boundary {
-  fill: none;
-  stroke: #fff;
-  stroke-width: .5px;
-}
-
-</style>
-
+<body>
 <script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="/js/hexbin.min.js"></script>
 <script>
 
-var width = 960,
-    height = 530;
 
-var projection = d3.geo.interrupt(d3.geo.sinuMollweide.raw)
-    .lobes([[ // northern hemisphere
-      [[-180,  35], [ -30,  90], [   0,  35]],
-      [[   0,  35], [  30,  90], [ 180,  35]]
-    ], [ // southern hemisphere
-      [[-180, -10], [-102, -90], [ -65, -10]],
-      [[ -65, -10], [   5, -90], [  77, -10]],
-      [[  77, -10], [ 103, -90], [ 180, -10]]
-    ]])
-    .rotate([-20, -55])
-    .scale(165)
-    .translate([width / 2, height / 2 - 16])
+
+var width = 960,
+    height = 500,
+    parseDate = d3.time.format("%x").parse;
+
+var color = d3.time.scale()
+    .domain([new Date(1962, 0, 1), new Date(2006, 0, 1)])
+    .range(["black", "steelblue"])
+    .interpolate(d3.interpolateLab);
+
+var hexbin = d3.hexbin()
+    .size([width, height])
+    .radius(8);
+
+var radius = d3.scale.sqrt()
+    .domain([0, 12])
+    .range([0, 8]);
+
+var projection = d3.geo.albers()
+    .scale(1000)
+    .translate([width / 2, height / 2])
     .precision(.1);
 
 var path = d3.geo.path()
     .projection(projection);
 
-var graticule = d3.geo.graticule();
-
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-var defs = svg.append("defs");
+queue()
+    .defer(d3.json, "/map-data/us.json")
+    .defer(d3.tsv, "/map-data/readme-walmart2.tsv")
+    .await(ready);
 
-defs.append("path")
-    .datum({type: "Sphere"})
-    .attr("id", "sphere")
-    .attr("d", path);
 
-defs.append("clipPath")
-    .attr("id", "clip")
-  .append("use")
-    .attr("xlink:href", "#sphere");
 
-svg.append("use")
-    .attr("class", "stroke")
-    .attr("xlink:href", "#sphere");
-
-svg.append("use")
-    .attr("class", "fill")
-    .attr("xlink:href", "#sphere");
-
-svg.append("path")
-    .datum(graticule)
-    .attr("class", "graticule")
-    .attr("clip-path", "url(#clip)")
-    .attr("d", path);
-
-d3.json("/mbostock/raw/4090846/world-50m.json", function(error, world) {
+function ready(error, us, walmarts) {
   if (error) throw error;
 
-  svg.insert("path", ".graticule")
-      .datum(topojson.feature(world, world.objects.land))
+  walmarts.forEach(function(d) {
+    var p = projection(d);
+    d[0] = p[0], d[1] = p[1];
+    d.date = parseDate(d.date);
+  });
+
+  svg.append("path")
+      .datum(topojson.feature(us, us.objects.land))
       .attr("class", "land")
-      .attr("clip-path", "url(#clip)")
       .attr("d", path);
 
-  svg.insert("path", ".graticule")
-      .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
-      .attr("class", "boundary")
-      .attr("clip-path", "url(#clip)")
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr("class", "states")
       .attr("d", path);
-});
 
-d3.select(self.frameElement).style("height", height + "px");
+  svg.append("g")
+      .attr("class", "hexagons")
+    .selectAll("path")
+      .data(hexbin(walmarts).sort(function(a, b) { return b.length - a.length; }))
+    .enter().append("path")
+      .attr("d", function(d) { return hexbin.hexagon(radius(d.length)); })
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .style("fill", function(d) { return color(d3.median(d, function(d) { return +d.date; })); });
+}
 
-</script></div>
-		
-					</div>
-				</div>
-			</div>
-		</div>
+</script>
+
+</body>
+
+</div>
 		<!-- /#page-content-wrapper -->
 
-	</div>
+
 	<!-- /#wrapper -->
 
 	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
+	<script src="/js/jquery.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 
 	<!-- Menu Toggle Script -->
 	<script>
@@ -197,6 +169,6 @@ d3.select(self.frameElement).style("height", height + "px");
 		});
 	</script>
 
-</body>
+
 
 </html>
