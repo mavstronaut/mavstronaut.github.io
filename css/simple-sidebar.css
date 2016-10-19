@@ -32,7 +32,7 @@
 
 #page-content-wrapper {
 	width: 100%;
-	background-color: #F2F2F2;
+	background-color: #e6f7ff;
 }
 
 .left-col {
@@ -53,6 +53,8 @@ h1 {
 	margin-bottom: 5px;
 	font-weight: bold;
 	color: #444444;
+	background-style: outset;
+	font-family: arial;
 }
 
 .us-map {
@@ -60,6 +62,8 @@ h1 {
 	position: absolute;
 }
 
+@
+deprecated
 .loc-map {
 	padding-top: 200px;
 	width: 49%;
@@ -68,14 +72,14 @@ h1 {
 }
 
 .container-fluid {
-	background-color: #F2F2F2;
+	background-color: #e6f2ff;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 7px;
 }
 
 body {
-	
+
 }
 
 .opac {
@@ -89,7 +93,7 @@ path {
 }
 
 .land {
-	fill: #ddd;
+	fill: #F2F2F2;
 }
 
 .states, .hexagons path {
@@ -97,7 +101,7 @@ path {
 }
 
 .row {
-	background-color: #F2F2F2;
+	background-color: #e6f2ff;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 20px;
@@ -122,13 +126,13 @@ path {
 	height: 1px;
 	background: #717171;
 	clear: both;
-	border-bottom: 1px solid #313030;
+	border-bottom: 1px solid #996633;
 }
 
 p {
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #FFFFFF;
+	background-color: #e6f2ff;
 	color: #666;
 	padding: 5px;
 	border-radius: 5px;
@@ -139,9 +143,11 @@ p {
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* */
 #wrapper.toggled #page-content-wrapper {
 	position: absolute;
 	margin-right: -250px;
+	background-color: #ebfaeb;
 }
 
 /* Sidebar Styles */
@@ -162,12 +168,12 @@ p {
 .sidebar-nav li a {
 	display: block;
 	text-decoration: none;
-	color: #999999;
+	color: #145214;
 }
 
 .sidebar-nav li a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #e6f2ff;
 	background: rgba(255, 255, 255, 0.2);
 }
 
@@ -200,10 +206,12 @@ button.accordion {
 	border: none;
 	outline: none;
 	transition: 0.4s;
+	border: outset;
 }
 
 button.butt.active, button.butt:hover {
-	background-color: #ddd;
+	background-color: #99ccff;
+	background-style: inset;
 }
 
 button.butt {
@@ -218,15 +226,16 @@ button.butt {
 	transition: 0.4s;
 	margin: auto;
 	width: 100%;
+	background-style: outset;
 }
 
 button.accordion.active, button.accordion:hover {
-	background-color: #ddd;
+	background-color: #99ccff;
 }
 
 div.panel {
 	padding: 0 18px;
-	background-color: white;
+	background-color: #ebfaeb;
 	display: none;
 }
 
@@ -235,71 +244,66 @@ div.panel.show {
 }
 
 #col-one {
-
+	background-style: inset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-  
-    height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
+	width: 16%;
 }
 
 #col-two {
-
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-    height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
 }
-#col-two.hover {
 
+#col-two.hover {
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-    height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	background-style: inset;
+	height: 500px;
 }
 
 #col-three {
-
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	background-style: outset;
+	height: 500px;
 }
 
 #col-four {
-
+	background-style: inset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
+	width: 16%;
 }
 
 #col-five {
-
+	background-style: outset;
 	width: 16%;
 	float: left;
-  border: 4px inset;
-  padding: 1%;
-
-height: 500px;
+	border: 4px inset;
+	padding: 1%;
+	height: 500px;
+	width: 16%;
 }
 
 #revolucio-icon {
 	background-color: #313a49;
 	width: 100%;
 	clear: both;
-	
 }
-
 
 @media ( min-width :768px) {
 	#wrapper {

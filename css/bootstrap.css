@@ -6427,12 +6427,13 @@ button.close {
 	clear:both;
 	position: absolute;
 	right: 0;
-	bottom: 0;
+	bottom: 19px;
 	left: 0;
 	margin-top: 42px;
 	padding: 1em;
-	background-color: #efefef;
+	background-color: #e6f2ff
 	text-align: center;
+	
 }
 
 
@@ -6448,6 +6449,7 @@ clear:both;
 .header {
 	width: 100%;
 	margin: 0px auto;
+	background-color: #e6f2ff
 }
 
 
@@ -6456,15 +6458,17 @@ h1 {
 	font-weight: bold;
 	color: #444444;
 	font-family: arial;
+	border-style: outset;
 }
 
 p {
     margin-left: auto;
     margin-right: auto;
-	background-color: #FFFFFF;
+	background-color: #e6f2ff;
 	color: #666;
 	padding: 5px;
 	border-radius: 5px;
+	border-style: hidden;
 	margin-top: 5px;
 
 	width: 100%;
