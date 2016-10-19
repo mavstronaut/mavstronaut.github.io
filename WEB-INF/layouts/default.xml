@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="revolucio.base" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="includes" value=""></put-attribute>
+		<put-attribute name="title" value="Rent Homes, Own Equity"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/sidebar.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/content.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="dashboard" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="title" value="Rent Homes, Own Equity"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/dashboard.jsp"></put-attribute>
+	</definition>
+
+	<definition name="portal" extends="revolucio.base">
+		<put-attribute name="title" value="Partner Portal"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/portal.jsp"></put-attribute>
+	</definition>
+
+	<definition name="services" extends="revolucio.base">
+		<put-attribute name="title" value="Rent, Invest, Own your Loan"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/services.jsp"></put-attribute>
+	</definition>
+
+	<definition name="community" extends="revolucio.base">
+		<put-attribute name="title" value="Discussion"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/community.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="accountmgmt" extends="revolucio.base">
+		<put-attribute name="title" value="Your Personal Details."></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accountmgmt.jsp"></put-attribute>
+	</definition>
+
+			<definition name="login" extends="revolucio.base">
+		<put-attribute name="title" value="Enter Details"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/login.jsp"></put-attribute>
+	</definition>
+	
+			<definition name="register" extends="revolucio.base">
+		<put-attribute name="title" value="Participate"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/register.jsp"></put-attribute>
+	</definition>
+
+</tiles-definitions>
