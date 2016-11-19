@@ -127,7 +127,7 @@ $.fn.fmtOomBlurb = function(o) {
             'The code is on <a href="https://www.github.com/tlbtlbtlb/startuptools">github</a> if you\'re curious how it works.</p>' +
             '</div>' +
             '<center>' +
-            '<span class="footer">By Trevor Blackwell</span>' +
+            '<span class="footer">42.</span>' +
             '</center>'
            );
 }
