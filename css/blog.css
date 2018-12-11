@@ -17,7 +17,7 @@
 /* main content */
 
 .main-content {
-  background: #f7f7f7;
+  background: #080808;
 }
 
 .main-content .container-main {
@@ -31,7 +31,7 @@
 }
 
 .container-main .block-main .content-main {
-  background: #fff none repeat scroll 0 0;
+  background: #000 none repeat scroll 0 0;
   display: inline-block;
   width: 100%;
 }
@@ -42,7 +42,7 @@
   line-height: 24px;
   margin: 0 0 13px 0;
   font-weight: 500;
-  color: #292929;
+  color: #d6d6d6;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -51,7 +51,7 @@
 }
 
 .journal-txt h4 a:hover {
-  color: #b8a07e;
+  color: #808000;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -70,14 +70,14 @@
 }
 
 .content-main .post-meta a {
-  color: #a2a2a2;
+  color: #5d5d5d;
   margin-left: 5px;
 }
 
 /* Commonts */
 
 .comments {
-  background: #fff;
+  background: #000;
 }
 
 .entry-comments h6 {
@@ -90,7 +90,7 @@
 .entry-comments-item {
   margin-top: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #0d0d0d;
 }
 
 .entry-comments-avatar {
@@ -108,14 +108,14 @@
 .entry-comments-author {
   margin-right: 10px;
   font-size: 13px;
-  color: #292929;
+  color: #5d5d5d;
   letter-spacing: 0.1em;
   font-weight: 500;
 }
 
 .rep {
   font-size: 13px;
-  color: #292929;
+  color: #5d5d5d;
   letter-spacing: 0.1em;
   font-weight: 500;
   text-transform: capitalize;
@@ -138,7 +138,7 @@
 
 blockquote {
   padding: 40px;
-  background-color: #f2f2f2;
+  background-color: #0d0d0d;
   margin: 30px 0;
   border: none;
   border-left: 4px solid #b8a07e;

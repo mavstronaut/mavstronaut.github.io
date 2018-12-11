@@ -10,8 +10,8 @@
 /*-----------------------------------------------------------------------------------*/
 
 body {
-  background: #ffffff;
-  color: #898989;
+  background: #000000;
+  color: #767676;
   font-family: 'Poppins', helvetica;
   font-size: 15px;
   font-weight: 300;
@@ -32,18 +32,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  color: #292929;
+  color: #ffffff;
   font-weight: 600;
 }
 
 h4 {
-  color: #292929;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
 }
 
 a {
-  color: #292929;
+  color: #ffffff;
   text-decoration: none !important;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -61,7 +61,7 @@ a:hover {
 }
 
 a:hover, a:focus {
-  color: #b8a07e;
+  color: #808000;
   text-decoration: underline;
 }
 
@@ -70,7 +70,7 @@ nav ul li a {
   position: relative;
   display: block;
   font-size: 12px;
-  color: #999999;
+  color: #bfbfbf;
   letter-spacing: 0.1em;
   font-weight: 500;
   line-height: 14px;
@@ -86,25 +86,25 @@ p {
   margin: 25px 0;
   padding: 0;
   font-size: 15px;
-  color: #999999;
+  color: #bfbfbf;
   line-height: 28px;
 }
 
 ::-moz-selection {
-  background: #b8a07e;
-  color: #fff;
+  background: #808000;
+  color: #ffffff;
 }
 
 ::selection {
-  background: #b8a07e;
-  color: #fff;
+  background: #808000;
+  color: #ffffff;
 }
 
 .btn {
   background: #333;
   border: medium none;
   border-radius: 0;
-  color: #fff;
+  color: #ffffff;
   font-size: 12px;
   height: 50px;
   line-height: 50px;
@@ -113,7 +113,7 @@ p {
 }
 
 .btn:hover, .btn:focus {
-  color: #fff;
+  color: #808000;
 }
 
 .padDiv {
@@ -132,7 +132,7 @@ p {
 
 .form-control {
   background-color: transparent;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border-radius: 0;
   color: #999999;
   font-size: 12px;
@@ -165,7 +165,7 @@ p {
 }
 
 .hvr-shutter-in-horizontal:hover {
-  background: #b8a07e;
+  background: #808000;
 }
 
 .mb-30 {
@@ -178,7 +178,7 @@ p {
 
 nav {
   position: fixed;
-  background: #fff;
+  background: #000000;
   z-index: 1000;
   width: 100%;
   padding: 20px;
@@ -208,7 +208,7 @@ nav ul li a {
   position: relative;
   display: block;
   font-size: 14px;
-  color: #999999;
+  color: #666666;
   font-family: 'Poppins', helvetica;
   font-weight: 500;
   line-height: 16px;
@@ -222,7 +222,7 @@ nav ul li a {
 }
 
 .logo img {
-  width: 100px;
+  width: 85;
   height: 50px;
 }
 
@@ -232,7 +232,7 @@ nav ul li a {
 }
 
 .active {
-  color: #afafaf;
+  color: #505050;
 }
 
 /*----------------------------------------------------------------------------------*/
@@ -241,7 +241,7 @@ nav ul li a {
 
 #header {
   background: url("../images/home-bg.jpg") repeat scroll center center / cover;
-  height: 100vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -260,16 +260,16 @@ nav ul li a {
   font-weight: 700;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
 }
 
 .header-content p {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 5px;
   margin-top: 0;
   margin-bottom: 30px;
   text-transform: capitalize;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -279,24 +279,24 @@ nav ul li a {
 }
 
 .header-content .list-social li i {
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Aout-us
+/*  About-us
 /*-----------------------------------------------------------------------------------*/
 
 #about {
   width: 100%;
   height: auto;
-  background: #f7f7f7;
+  background: #080808;
   padding-top: 190px;
 }
 
 #about .div-img-bg {
   padding-bottom: 30px;
-  border: 20px solid #b8a07e;
+  border: 20px solid #d6d6d6;
 }
 
 #about .div-img-bg .about-img img {
@@ -325,7 +325,7 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #services {
-  background: #f7f7f7;
+  background: #080808;
   position: relative;
   padding-bottom: 80px;
 }
@@ -337,7 +337,7 @@ nav ul li a {
   margin: 10px 0;
   position: relative;
   font-size: 13px;
-  color: #292929;
+  color: #d6d6d6;
   letter-spacing: 0.1em;
   font-weight: 500;
   text-transform: uppercase;
@@ -352,7 +352,7 @@ nav ul li a {
 
 .services-block i {
   font-size: 44px;
-  color: #b8a07e;
+  color: #808000;
   line-height: 44px;
 }
 
@@ -379,7 +379,7 @@ nav ul li a {
 }
 
 .services-carousel .owl-dot.active {
-  background-color: #b8a07e;
+  background-color: #808000;
 }
 
 .owl-nav {
@@ -409,7 +409,7 @@ nav ul li a {
   margin: 0 40px 0 0;
   float: left;
   font-size: 14px;
-  color: #999999;
+  color: #666666;
   line-height: 16px;
   cursor: pointer;
   font-family: 'Poppins', helvetica;
@@ -424,7 +424,7 @@ nav ul li a {
 }
 
 #portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
-  color: #b8a07e;
+  color: #808000;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -455,13 +455,13 @@ nav ul li a {
 #journal,  #journal-blog {
   height: auto;
   width: 100%;
-  background: #f7f7f7;
+  background: #080808;
   padding-bottom: 60px;
   position: relative;
 }
 
 #journal-blog {
-  background: #fff;
+  background: #000000;
   padding-bottom: 30px;
 }
 
@@ -490,7 +490,7 @@ nav ul li a {
   line-height: 24px;
   margin: 0 0 13px 0;
   font-weight: 500;
-  color: #292929;
+  color: #d6d6d6;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -499,7 +499,7 @@ nav ul li a {
 }
 
 .journal-block .journal-info .journal-txt h4 a:hover {
-  color: #b8a07e;
+  color: #808000;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -574,7 +574,7 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #footer {
-  background: #f7f7f7;
+  background: #080808;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -597,7 +597,7 @@ nav ul li a {
 
 #footer .socials-media ul li a {
   font-size: 24px;
-  color: #999;
+  color: #666666;
   letter-spacing: 0.1em;
   font-weight: 500;
   background: transparent;
@@ -610,7 +610,7 @@ nav ul li a {
 }
 
 #footer .socials-media ul li a:hover {
-  color: #b8a07e;
+  color: #808000;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
